@@ -1,6 +1,5 @@
 # WhatsappStatusRingBar
 
-[![CI Status](https://img.shields.io/travis/divyeshpansuriya-ios/WhatsappStatusRingBar.svg?style=flat)](https://travis-ci.org/divyeshpansuriya-ios/WhatsappStatusRingBar)
 [![Version](https://img.shields.io/cocoapods/v/WhatsappStatusRingBar.svg?style=flat)](https://cocoapods.org/pods/WhatsappStatusRingBar)
 [![License](https://img.shields.io/cocoapods/l/WhatsappStatusRingBar.svg?style=flat)](https://cocoapods.org/pods/WhatsappStatusRingBar)
 [![Platform](https://img.shields.io/cocoapods/p/WhatsappStatusRingBar.svg?style=flat)](https://cocoapods.org/pods/WhatsappStatusRingBar)
@@ -18,7 +17,7 @@ Xcode 13.0+
 ## Installation
 
 `WhatsappStatusRingBar` is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+it, simply add the following line to your `Podfile`:
 
 ```ruby
 pod 'WhatsappStatusRingBar'
@@ -29,8 +28,8 @@ Most of the control's parameters can be customized in Interface Builder.
 
 ## Author
 
-Divyesh Pansuriya, adpansuriya7300@gmail.com
+`Divyesh Pansuriya`, adpansuriya7300@gmail.com
 
 ## License
 
-WhatsappStatusRingBar is available under the MIT license. See the LICENSE file for more info.
+`WhatsappStatusRingBar` is available under the MIT license. See the LICENSE file for more info.
