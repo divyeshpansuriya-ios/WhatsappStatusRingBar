@@ -31,7 +31,7 @@ WhatsappStatusRingBar is a circular progress bar for iOS written in Swift, easy 
   s.ios.deployment_target = '12.0'
   s.swift_version = '5.0'
   s.source_files = 'WhatsappStatusRingBar/Classes/**/*'
-   
+  s.ios.source_files = 'WhatsappStatusRingBar/Classes/**/*'
   # s.resource_bundles = {
   #   'WhatsappStatusRingBar' => ['WhatsappStatusRingBar/Assets/*.png']
   # }
