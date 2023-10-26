@@ -23,7 +23,7 @@ pod 'WhatsappStatusRingBar'
 
 ## Author
 
-divyeshpansuriya-ios, adpansuriya7300@gmail.com
+Divyesh Pansuriya, adpansuriya7300@gmail.com
 
 ## License
 
