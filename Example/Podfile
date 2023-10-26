@@ -1,9 +1,10 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '12.0'
 
 target 'WhatsappStatusRingBar_Example' do
-  pod 'WhatsappStatusRingBar', :path => '../'
+ 
+ pod 'WhatsappStatusRingBar'
 
   target 'WhatsappStatusRingBar_Tests' do
     inherit! :search_paths
