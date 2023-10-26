@@ -10,6 +10,7 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+This component is written using Swift 5 so you will need to run Xcode 11 or higher.
 
 ## Installation
 
