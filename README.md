@@ -12,7 +12,8 @@ https://github.com/divyeshpansuriya-ios/WhatsappStatusRingBar/assets/58874055/c9
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-This component is written using Swift 5 so you will need to run Xcode 11 or higher.
+iOS 12.0+
+Xcode 13.0+
 
 ## Installation
 
@@ -22,9 +23,8 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'WhatsappStatusRingBar'
 ```
-## Usages
-
-
+## Interface Builder
+WhatsappStatusRingBar can be set up in Interface Builder. To use it, set the custom view class to WhatsappStatusRingBar. Most of the control's parameters can be customized in Interface Builder.
 
 ## Author
 
