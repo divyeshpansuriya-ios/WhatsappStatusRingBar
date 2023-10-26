@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "21ef856a469f45dbf32c8c986c4d83f87687eb6b972bd866720107dec6f07723"
+build_start_time: [1698325249, 724312000]
+build_end_time: [1698325250, 462290000]
+inputs:
+  "/Users/imac/Documents/Library/WhatsappStatusRingBar/Sources/WhatsappStatusRingBar/WhatsappStatusRingBar.swift": [1698323779, 676084147]

@@ -1,0 +1,4 @@
+module WhatsappStatusRingBar {
+    header "/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build/WhatsappStatusRingBar-Swift.h"
+    requires objc
+}

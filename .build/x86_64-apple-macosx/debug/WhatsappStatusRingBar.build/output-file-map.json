@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build/master.swiftdeps"
+  },
+  "/Users/imac/Documents/Library/WhatsappStatusRingBar/Sources/WhatsappStatusRingBar/WhatsappStatusRingBar.swift": {
+    "dependencies": "/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build/WhatsappStatusRingBar.d",
+    "object": "/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build/WhatsappStatusRingBar.swift.o",
+    "swiftmodule": "/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build/WhatsappStatusRingBar~partial.swiftmodule",
+    "swift-dependencies": "/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build/WhatsappStatusRingBar.swiftdeps"
+  }
+}

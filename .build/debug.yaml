@@ -1,0 +1,80 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "WhatsappStatusRingBar-debug.module": ["<WhatsappStatusRingBar-debug.module>"]
+  "WhatsappStatusRingBarPackageTests-debug.test": ["<WhatsappStatusRingBarPackageTests-debug.test>"]
+  "WhatsappStatusRingBarTests-debug.module": ["<WhatsappStatusRingBarTests-debug.module>"]
+  "main": ["<WhatsappStatusRingBar-debug.module>"]
+  "test": ["<WhatsappStatusRingBar-debug.module>","<WhatsappStatusRingBarPackageTests-debug.test>","<WhatsappStatusRingBarTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/imac/Documents/Library/WhatsappStatusRingBar/Sources/WhatsappStatusRingBar/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/imac/Documents/Library/WhatsappStatusRingBar/Tests/WhatsappStatusRingBarTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "<WhatsappStatusRingBar-debug.module>":
+    tool: phony
+    inputs: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build/WhatsappStatusRingBar.swift.o","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.swiftmodule"]
+    outputs: ["<WhatsappStatusRingBar-debug.module>"]
+
+  "<WhatsappStatusRingBarPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarPackageTests.xctest/Contents/MacOS/WhatsappStatusRingBarPackageTests"]
+    outputs: ["<WhatsappStatusRingBarPackageTests-debug.test>"]
+
+  "<WhatsappStatusRingBarTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarTests.build/WhatsappStatusRingBarTests.swift.o","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarTests.swiftmodule"]
+    outputs: ["<WhatsappStatusRingBarTests-debug.module>"]
+
+  "C.WhatsappStatusRingBar-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/Sources/WhatsappStatusRingBar/WhatsappStatusRingBar.swift"]
+    outputs: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build/WhatsappStatusRingBar.swift.o","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "WhatsappStatusRingBar"
+    module-output-path: "/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.swiftmodule"
+    import-paths: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build"
+    objects: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build/WhatsappStatusRingBar.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.13","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build/WhatsappStatusRingBar-Swift.h","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"]
+    sources: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/Sources/WhatsappStatusRingBar/WhatsappStatusRingBar.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.WhatsappStatusRingBarPackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.build/WhatsappStatusRingBar.swift.o","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarTests.build/WhatsappStatusRingBarTests.swift.o"]
+    outputs: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarPackageTests.xctest/Contents/MacOS/WhatsappStatusRingBarPackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarPackageTests.xctest/Contents/MacOS/WhatsappStatusRingBarPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug","-o","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarPackageTests.xctest/Contents/MacOS/WhatsappStatusRingBarPackageTests","-module-name","WhatsappStatusRingBarPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/macosx","-target","x86_64-apple-macosx12.0","-Xlinker","-add_ast_path","-Xlinker","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarTests.swiftmodule","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.WhatsappStatusRingBarTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/Tests/WhatsappStatusRingBarTests/WhatsappStatusRingBarTests.swift","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBar.swiftmodule"]
+    outputs: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarTests.build/WhatsappStatusRingBarTests.swift.o","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "WhatsappStatusRingBarTests"
+    module-output-path: "/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarTests.swiftmodule"
+    import-paths: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarTests.build"
+    objects: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/WhatsappStatusRingBarTests.build/WhatsappStatusRingBarTests.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx12.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/imac/Documents/Library/WhatsappStatusRingBar/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"]
+    sources: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/Tests/WhatsappStatusRingBarTests/WhatsappStatusRingBarTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/imac/Documents/Library/WhatsappStatusRingBar/Sources/WhatsappStatusRingBar/","/Users/imac/Documents/Library/WhatsappStatusRingBar/Tests/WhatsappStatusRingBarTests/","/Users/imac/Documents/Library/WhatsappStatusRingBar/Package.swift","/Users/imac/Documents/Library/WhatsappStatusRingBar/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
