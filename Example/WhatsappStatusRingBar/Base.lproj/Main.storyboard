@@ -1,30 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="z4c-lY-bGA">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="Q6M-ux-Ux7">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="WhatsappStatusRingBar_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z4c-lY-bGA" customClass="ViewController" customModule="WhatsappStatusRingBar_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="5OZ-3X-89p"/>
+                        <viewControllerLayoutGuide type="bottom" id="SIm-hi-a1L"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="BKP-9X-VqY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFI-eH-fVV" customClass="WhatsappStatusRingBar" customModule="WhatsappStatusRingBar">
+                                <rect key="frame" x="137.5" y="183.5" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aFI-eH-fVV" secondAttribute="height" id="D6K-JI-VdQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="WyD-On-fpG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageInset">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="seenProgressColor">
+                                        <color key="value" systemColor="systemGreenColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unseenProgressColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="total">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spaceInset">
+                                        <real key="value" value="0.25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="profile1"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tmM-sf-QYJ">
+                                <rect key="frame" x="36" y="333.5" width="303" height="133"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ub7-wH-U2Y" userLabel="Total">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="ayh-ak-rw9">
+                                        <rect key="frame" x="-2" y="31.5" width="307" height="31"/>
+                                        <connections>
+                                            <action selector="totalCountOfStory:" destination="z4c-lY-bGA" eventType="valueChanged" id="ex7-RL-1rX"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seen Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYU-gq-r21">
+                                        <rect key="frame" x="0.0" y="71.5" width="303" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="40" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ak-yq-uoD">
+                                        <rect key="frame" x="-2" y="103" width="307" height="31"/>
+                                        <connections>
+                                            <action selector="totalCountOfSeenStory:" destination="z4c-lY-bGA" eventType="valueChanged" id="GRc-gK-Hij"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ub7-wH-U2Y" firstAttribute="leading" secondItem="tmM-sf-QYJ" secondAttribute="leading" id="1Yj-MI-JwV"/>
+                                    <constraint firstItem="AYU-gq-r21" firstAttribute="leading" secondItem="tmM-sf-QYJ" secondAttribute="leading" id="BHf-I2-5aA"/>
+                                    <constraint firstAttribute="trailing" secondItem="ayh-ak-rw9" secondAttribute="trailing" id="Lwb-jx-RJX"/>
+                                    <constraint firstItem="ayh-ak-rw9" firstAttribute="leading" secondItem="tmM-sf-QYJ" secondAttribute="leading" id="P9S-lk-eNN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ub7-wH-U2Y" secondAttribute="trailing" id="hvu-5C-8Po"/>
+                                    <constraint firstAttribute="trailing" secondItem="AYU-gq-r21" secondAttribute="trailing" id="jSi-km-vrW"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ak-yq-uoD" secondAttribute="trailing" id="v0g-WI-8or"/>
+                                    <constraint firstItem="7ak-yq-uoD" firstAttribute="leading" secondItem="tmM-sf-QYJ" secondAttribute="leading" id="xzG-ED-xdG"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="snn-7u-mfB">
+                                <rect key="frame" x="36" y="40" width="303" height="57.5"/>
+                                <string key="text">Whatsapp Status
+ Ring Bar</string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aFI-eH-fVV" firstAttribute="centerY" secondItem="BKP-9X-VqY" secondAttribute="centerY" constant="-100" id="EeH-iF-mvF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="snn-7u-mfB" secondAttribute="trailing" constant="20" id="S9q-Ju-fpU"/>
+                            <constraint firstItem="snn-7u-mfB" firstAttribute="top" secondItem="5OZ-3X-89p" secondAttribute="bottom" constant="20" id="TEE-9t-2OG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tmM-sf-QYJ" secondAttribute="trailing" constant="20" id="Xu0-js-Ys9"/>
+                            <constraint firstItem="tmM-sf-QYJ" firstAttribute="top" secondItem="aFI-eH-fVV" secondAttribute="bottom" constant="50" id="d28-I9-ehZ"/>
+                            <constraint firstItem="tmM-sf-QYJ" firstAttribute="leading" secondItem="BKP-9X-VqY" secondAttribute="leadingMargin" constant="20" id="jVv-Gb-2OE"/>
+                            <constraint firstItem="snn-7u-mfB" firstAttribute="leading" secondItem="BKP-9X-VqY" secondAttribute="leadingMargin" constant="20" id="mP4-qT-Tc4"/>
+                            <constraint firstItem="aFI-eH-fVV" firstAttribute="centerX" secondItem="BKP-9X-VqY" secondAttribute="centerX" id="owu-NU-67m"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="aFI-eH-fVV" id="y9t-eS-baq"/>
+                        <outlet property="totalCount" destination="ayh-ak-rw9" id="cYz-sR-LHA"/>
+                        <outlet property="totalSeenCount" destination="7ak-yq-uoD" id="Ag3-b2-SND"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ls2-e9-wx5" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-89" y="-69"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile1" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
