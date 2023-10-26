@@ -7,6 +7,8 @@
 
 ## Example
 
+https://github.com/divyeshpansuriya-ios/WhatsappStatusRingBar/assets/58874055/c9ab47be-3798-4b42-8583-7ced05de4ae7
+
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
@@ -20,6 +22,9 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'WhatsappStatusRingBar'
 ```
+## Usages
+
+
 
 ## Author
 
