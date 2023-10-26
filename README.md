@@ -17,14 +17,15 @@ Xcode 13.0+
 
 ## Installation
 
-WhatsappStatusRingBar is available through [CocoaPods](https://cocoapods.org). To install
+`WhatsappStatusRingBar` is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'WhatsappStatusRingBar'
 ```
 ## Interface Builder
-WhatsappStatusRingBar can be set up in Interface Builder. To use it, set the custom view class to WhatsappStatusRingBar. Most of the control's parameters can be customized in Interface Builder.
+`WhatsappStatusRingBar` can be set up in Interface Builder. To use it, set the custom view class to `WhatsappStatusRingBar`.
+Most of the control's parameters can be customized in Interface Builder.
 
 ## Author
 
